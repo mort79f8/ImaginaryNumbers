@@ -78,6 +78,27 @@ namespace NameGenerator
                 }
             }
 
+            while (true)
+            {
+                Console.WriteLine("Select gender for printout m/f:");
+                string result = Console.ReadLine();
+                if (result == "m")
+                {
+                    // print male list
+                    Console.WriteLine("Male list");
+                }
+                else if (result == "f")
+                {
+                    // print female list
+                    Console.WriteLine("Female list");
+                }
+                else
+                {
+                    Console.WriteLine("select m or f");
+                }
+            }
+            
+            
         }
     }
 }
