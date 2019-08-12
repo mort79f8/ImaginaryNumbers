@@ -61,7 +61,22 @@ namespace NameGenerator
                 }
             }
 
-
+            foreach (var preLetter in preLettersFemale)
+            {
+                string pre;
+                pre = femaleStart + preLetter;
+                foreach (var vocal in vocals)
+                {
+                    string preVocal;
+                    preVocal = pre + vocal;
+                    foreach (var endLetter in endLettersFemale)
+                    {
+                        string preVocalEndLetter;
+                        preVocalEndLetter = preVocal + endLetter;
+                        namesFemale.Add(preVocalEndLetter);
+                    }
+                }
+            }
 
         }
     }
