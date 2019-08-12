@@ -19,13 +19,49 @@ namespace NameGenerator
 
             foreach (var letter in preLettersMale)
             {
-                string name = "";
-                name = letter;
-                
-
-                Console.WriteLine(name);
-                Console.WriteLine();            
+                string pre = "";
+                pre = letter;
+                foreach (var vocal in vocals)
+                {
+                    string preVocal;
+                    preVocal = pre + vocal;
+                    foreach (var middleLetter in middleLettersMale)
+                    {
+                        string preVocalMiddle;
+                        preVocalMiddle = preVocal + middleLetter;
+                        foreach (var endVocal in vocals)
+                        {
+                            string preVocalMiddleEndVocal;
+                            preVocalMiddleEndVocal = preVocalMiddle + endVocal;
+                            foreach (var endLetter in endLettersMale)
+                            {
+                                string preVocalMiddleEndVocalEndLetter;
+                                preVocalMiddleEndVocalEndLetter = preVocalMiddleEndVocal + endLetter;
+                                namesMale.Add(preVocalMiddleEndVocalEndLetter);
+                            }
+                        }
+                    }
+                }
             }
+
+            foreach (var preLetter in preLettersMale)
+            {
+                string pre = "";
+                pre = preLetter;
+                foreach (var vocal in vocals)
+                {
+                    string preVocal;
+                    preVocal = pre + vocal;
+                    foreach (var endLetter in endLettersMale)
+                    {
+                        string preVocalEndLetter;
+                        preVocalEndLetter = preVocal + endLetter;
+                        namesMale.Add(preVocalEndLetter);
+                    }
+                }
+            }
+
+
 
         }
     }
